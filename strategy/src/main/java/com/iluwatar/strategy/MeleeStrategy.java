@@ -30,11 +30,12 @@ import org.slf4j.LoggerFactory;
  * Melee strategy.
  *
  */
-public class MeleeStrategy {
+public class MeleeStrategy implements DragonSlayingStrategy {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(MeleeStrategy.class);
 
   public void execute() {
     LOGGER.info("With your Excalibur you sever the dragon's head!");
   }
+
 }

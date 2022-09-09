@@ -48,16 +48,25 @@ public class App {
    * via Context {@link DragonSlayer}) verwendet werden können
    */
   public static void main(String[] args) {
-    LOGGER.info("Green dragon spotted ahead!");
-    MeleeStrategy meleeStrategy = new MeleeStrategy();
-    meleeStrategy.execute();
+    DragonSlayer context = new DragonSlayer(new MeleeStrategy());
+    context.goToBattle();
 
-    LOGGER.info("Red dragon emerges.");
-    ProjectileStrategy projectileStrategy = new ProjectileStrategy();
-    projectileStrategy.execute();
+    context.changeStrategy(new ProjectileStrategy());
+    context.goToBattle();
 
-    LOGGER.info("Black dragon lands before you.");
-    SpellStrategy spellStrategy = new SpellStrategy();
-    spellStrategy.execute();
+    context.changeStrategy(new SpellStrategy());
+    context.goToBattle();
+//
+//    LOGGER.info("Green dragon spotted ahead!");
+//    MeleeStrategy meleeStrategy = new MeleeStrategy();
+//    meleeStrategy.execute();
+//
+//    LOGGER.info("Red dragon emerges.");
+//    ProjectileStrategy projectileStrategy = new ProjectileStrategy();
+//    projectileStrategy.execute();
+//
+//    LOGGER.info("Black dragon lands before you.");
+//    SpellStrategy spellStrategy = new SpellStrategy();
+//    spellStrategy.execute();
   }
 }
