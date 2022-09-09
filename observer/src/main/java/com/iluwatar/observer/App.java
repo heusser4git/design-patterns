@@ -63,10 +63,10 @@ public class App {
      */
 
     weather.timePasses();
-//    weather.timePasses();
-//    weather.timePasses();
-//    weather.timePasses();
-//    weather.timePasses();
+    weather.timePasses();
+    weather.timePasses();
+    weather.timePasses();
+    weather.timePasses();
 
   }
 }
