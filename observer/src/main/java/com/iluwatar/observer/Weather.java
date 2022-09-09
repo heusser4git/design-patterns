@@ -48,7 +48,12 @@ public class Weather {
     observers = new ArrayList<>();
     currentWeather = WeatherType.SUNNY;
   }
-
+  public void updateObserver() {
+    for (WeatherObserver wo:observers) {
+      wo.update(currentWeather);
+      LOGGER.info("Observer informed:.");
+    }
+  }
   public void addObserver(WeatherObserver obs) {
     observers.add(obs);
   }
@@ -64,6 +69,7 @@ public class Weather {
     WeatherType[] enumValues = WeatherType.values();
     currentWeather = enumValues[(currentWeather.ordinal() + 1) % enumValues.length];
     LOGGER.info("The weather changed to {}.", currentWeather);
+    updateObserver();
   }
 
   public WeatherType getCurrentWeather() {

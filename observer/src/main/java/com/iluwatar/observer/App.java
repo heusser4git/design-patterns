@@ -59,23 +59,14 @@ public class App {
     /**
      *  sobald das Subject {@link Weather} korrekt implementiert ist,
      *  ist es nicht mehr nötig die update-Method von {@link Orcs} und {@link Hobbits} manuell aufzurufen
-     *  @todo: entferne die manuellen Aufrufe der update-Methode! => alle Tests müssen grün werden
+     *  ..entferne die manuellen Aufrufe der update-Methode! => alle Tests müssen grün werden
      */
 
     weather.timePasses();
-    orcs.update(weather.getCurrentWeather());
-    hobbits.update(weather.getCurrentWeather());
+//    weather.timePasses();
+//    weather.timePasses();
+//    weather.timePasses();
+//    weather.timePasses();
 
-    weather.timePasses();
-    orcs.update(weather.getCurrentWeather());
-    hobbits.update(weather.getCurrentWeather());
-
-    weather.timePasses();
-    orcs.update(weather.getCurrentWeather());
-    hobbits.update(weather.getCurrentWeather());
-
-    weather.timePasses();
-    orcs.update(weather.getCurrentWeather());
-    hobbits.update(weather.getCurrentWeather());
   }
 }
