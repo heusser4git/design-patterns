@@ -4,7 +4,7 @@ public final class InternetConnection {
     private InternetConnection() {
     }
 
-    static RealInternet create() {
-        return new RealInternet();
+    static Internet create() {
+        return new RestrictedInternet();
     }
 }
