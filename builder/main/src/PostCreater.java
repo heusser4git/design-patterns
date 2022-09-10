@@ -12,6 +12,25 @@ public class PostCreater {
         posts.add(new Post("blog-post", "javadevcentral"));
         posts.add(new Post("blog-post", "javadevcentral", "17.11"));
         posts.add(new Post("blog-post", "javadevcentral", "18.11", 1000, 5000));
+        posts.add(
+                new Post.Builder("blog-post")
+                        .setAuthor("javadevcentral")
+                        .build()
+        );
+        posts.add(
+                new Post.Builder("blog-post")
+                        .setAuthor("javadevcentral")
+                        .setDatePosted("17.11")
+                        .build()
+        );
+        posts.add(
+                new Post.Builder("blog-post")
+                        .setAuthor("javadevcentral")
+                        .setDatePosted("18.11")
+                        .setNumberOfWords(1000)
+                        .setNumberOfCharacters(5000)
+                        .build()
+        );
         printPosts();
     }
 
