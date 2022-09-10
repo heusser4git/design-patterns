@@ -36,24 +36,24 @@ public class HalflingThief {
   }
 
   public void steal() {
+    method.steal();
+//    /**
+//     * Dieser Code riecht übel;-)
+//     * : hier reicht es aus "method.steal()" aufzurufen,
+//     * sofern Du {@link StealingMethod} um diese template Methode entsprechend erweiterst
+//     */
 
-    /**
-     * Dieser Code riecht übel;-)
-     * @todo: hier reicht es aus "method.steal()" aufzurufen,
-     * sofern Du {@link StealingMethod} um diese template Methode entsprechend erweiterst
-     */
-
-    if(method instanceof HitAndRunMethod) {
-      HitAndRunMethod hitAndRunMethod = (HitAndRunMethod) method;
-      String target = hitAndRunMethod.pickTarget();
-      hitAndRunMethod.confuseTarget(target);
-      hitAndRunMethod.stealTheItem(target);
-    } else if(method instanceof SubtleMethod){
-      SubtleMethod subtleMethod = (SubtleMethod) method;
-      String target = subtleMethod.chooseTarget();
-      subtleMethod.confuseTarget(target);
-      subtleMethod.stealIt(target);
-    }
+//    if(method instanceof HitAndRunMethod) {
+//      HitAndRunMethod hitAndRunMethod = (HitAndRunMethod) method;
+//      String target = hitAndRunMethod.pickTarget();
+//      hitAndRunMethod.confuseTarget(target);
+//      hitAndRunMethod.stealTheItem(target);
+//    } else if(method instanceof SubtleMethod){
+//      SubtleMethod subtleMethod = (SubtleMethod) method;
+//      String target = subtleMethod.chooseTarget();
+//      subtleMethod.confuseTarget(target);
+//      subtleMethod.stealIt(target);
+//    }
   }
 
   public void changeMethod(StealingMethod method) {

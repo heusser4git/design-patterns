@@ -38,6 +38,11 @@ public class HitAndRunMethod extends StealingMethod {
     return "old goblin woman";
   }
 
+  @Override
+  String chooseTarget() {
+    return null;
+  }
+
   void confuseTarget(String target) {
     LOGGER.info("Approach the {} from behind.", target);
   }

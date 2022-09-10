@@ -33,7 +33,16 @@ import org.slf4j.LoggerFactory;
 public abstract class StealingMethod {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(StealingMethod.class);
+  public void steal() {
+    String target = pickTarget();
+    chooseTarget();
+    confuseTarget(target);
+    stealTheItem(target);
+  }
 
+  abstract String pickTarget();
+  abstract String chooseTarget();
+  abstract void confuseTarget(String target);
+  abstract void stealTheItem(String target);
 
-  //todo: ergänze den Code um die template method "steal"
 }

@@ -34,12 +34,27 @@ public class SubtleMethod extends StealingMethod{
 
   private static final Logger LOGGER = LoggerFactory.getLogger(SubtleMethod.class);
 
+  @Override
+  public void steal() {
+    super.steal();
+  }
+
+  @Override
+  String pickTarget() {
+    return this.chooseTarget();
+  }
+
   String chooseTarget() {
     return "shop keeper";
   }
 
   void confuseTarget(String target) {
     LOGGER.info("Approach the {} with tears running and hug him!", target);
+  }
+
+  @Override
+  void stealTheItem(String target) {
+    this.stealIt(target);
   }
 
   void stealIt(String target) {

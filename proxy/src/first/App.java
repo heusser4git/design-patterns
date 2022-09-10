@@ -14,10 +14,10 @@ public class App {
         ProxyPicture image = new ProxyPicture("largePicture.jpg");
 
         //picture will be loaded from server
-        image.draw();
+        image.display();
         System.out.println("now read from cache");
 
         //cached picture (do not download picture again)
-        image.draw();
+        image.display();
     }
 }
